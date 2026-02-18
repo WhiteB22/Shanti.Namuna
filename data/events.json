@@ -1,0 +1,8 @@
+[
+  {"id":"EVT-1001","title":"National Science Fair","date":"2026-03-12","type":"academic","description":"Student innovation projects, coding demos, and lab exhibits."},
+  {"id":"EVT-1002","title":"Inter-House Football Tournament","date":"2026-04-04","type":"sports","description":"A full-day sports championship with house-level finals."},
+  {"id":"EVT-1003","title":"Community Service Week","date":"2026-05-10","type":"community","description":"Clean-up drives, health awareness, and neighborhood outreach."},
+  {"id":"EVT-1004","title":"Mathematics Olympiad Prep Camp","date":"2026-06-01","type":"academic","description":"Advanced training sessions for competitive mathematics."},
+  {"id":"EVT-1005","title":"Annual Athletics Meet","date":"2026-06-18","type":"sports","description":"Track and field events featuring all grade levels."},
+  {"id":"EVT-1006","title":"Parent Partnership Forum","date":"2026-07-02","type":"community","description":"Collaborative sessions on student wellbeing and success plans."}
+]

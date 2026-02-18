@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanti Namuna Secondary School • v2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <div class="brand">
+          <span class="logo">SN</span>
+          <div>
+            <p class="school-name">Shanti Namuna Secondary School</p>
+            <p class="tagline">Excellence • Character • Community</p>
+          </div>
+        </div>
+        <button id="menuButton" class="menu-btn" aria-label="Toggle menu">☰</button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#admission">Admission</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#admin">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1>Version 2: Full School Website with Working Backend</h1>
+            <p>
+              Shanti Namuna Secondary School now supports fully working server-side
+              admissions, contact inquiries, event management, and fee calculation.
+            </p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#admission">Apply Now</a>
+              <a class="btn ghost" href="#admin">Open Admin Dashboard</a>
+            </div>
+          </div>
+          <aside class="stats-card">
+            <h2>At a Glance</h2>
+            <ul>
+              <li><strong data-counter="1250">0</strong> Students</li>
+              <li><strong data-counter="96">0</strong>% Pass Rate</li>
+              <li><strong data-counter="78">0</strong> Teachers & Staff</li>
+              <li><strong data-counter="35">0</strong> Clubs & Activities</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section container">
+        <h2>Why Families Choose Shanti Namuna</h2>
+        <div class="cards three-col">
+          <article class="card">
+            <h3>Academic Excellence</h3>
+            <p>Project-based curriculum and exceptional teaching quality.</p>
+          </article>
+          <article class="card">
+            <h3>Digital Classrooms</h3>
+            <p>Smart technology for practical and future-ready learning.</p>
+          </article>
+          <article class="card">
+            <h3>Holistic Development</h3>
+            <p>Leadership, arts, sports, and social responsibility programs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="programs" class="section alt-bg">
+        <div class="container">
+          <h2>Programs & Departments</h2>
+          <div class="cards two-col">
+            <article class="card"><h3>Science & Technology</h3><p>STEM labs, coding, robotics.</p></article>
+            <article class="card"><h3>Humanities & Languages</h3><p>Communication and critical thinking focus.</p></article>
+            <article class="card"><h3>Commerce & Entrepreneurship</h3><p>Business literacy and startup simulation.</p></article>
+            <article class="card"><h3>Arts, Sports & Wellbeing</h3><p>Balanced development and teamwork culture.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="section container">
+        <div class="section-head">
+          <h2>School Events (Live from Backend)</h2>
+          <div class="filter-group">
+            <label for="eventFilter">Filter by type:</label>
+            <select id="eventFilter">
+              <option value="all">All</option>
+              <option value="academic">Academic</option>
+              <option value="sports">Sports</option>
+              <option value="community">Community</option>
+            </select>
+          </div>
+        </div>
+        <div id="eventsList" class="cards three-col"></div>
+      </section>
+
+      <section id="admission" class="section alt-bg">
+        <div class="container split">
+          <div>
+            <h2>Admission Application</h2>
+            <form id="admissionForm" class="stacked-form" novalidate>
+              <label>Student Full Name <input type="text" id="studentName" required /></label>
+              <label>
+                Grade Applying For
+                <select id="grade" required>
+                  <option value="">Select grade</option>
+                  <option value="6">Grade 6</option>
+                  <option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option>
+                  <option value="9">Grade 9</option>
+                  <option value="10">Grade 10</option>
+                </select>
+              </label>
+              <label>Parent/Guardian Email <input type="email" id="parentEmail" required /></label>
+              <label>Contact Number <input type="tel" id="contact" placeholder="10-digit number" required /></label>
+              <button type="submit" class="btn primary">Submit Application</button>
+              <p id="admissionMessage" class="form-message" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="fee-box">
+            <h3>Fee Estimator (Server-calculated)</h3>
+            <form id="feeForm" class="stacked-form" novalidate>
+              <label>
+                Grade
+                <select id="feeGrade" required>
+                  <option value="">Select grade</option>
+                  <option value="6">Grade 6</option>
+                  <option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option>
+                  <option value="9">Grade 9</option>
+                  <option value="10">Grade 10</option>
+                </select>
+              </label>
+              <label><input type="checkbox" id="transport" /> Transport Service</label>
+              <label><input type="checkbox" id="meal" /> Meal Plan</label>
+              <label><input type="checkbox" id="hostel" /> Hostel Facility</label>
+              <button type="submit" class="btn ghost">Calculate Fee</button>
+            </form>
+            <p id="feeResult" class="fee-result" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2>Contact & Inquiry</h2>
+        <form id="contactForm" class="stacked-form contact-wide" novalidate>
+          <label>Your Name <input type="text" id="contactName" required /></label>
+          <label>Your Email <input type="email" id="contactEmail" required /></label>
+          <label>Message <textarea id="contactMessage" rows="4" required></textarea></label>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p id="contactFeedback" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="admin" class="section alt-bg">
+        <div class="container">
+          <div class="admin-head"><h2>Admin Dashboard (Live Data)</h2><button id="refreshDashboard" class="btn ghost" type="button">Refresh Data</button></div>
+          <div class="cards three-col admin-metrics">
+            <article class="card"><h3>Total Admissions</h3><p id="admissionsCount">0</p></article>
+            <article class="card"><h3>Total Messages</h3><p id="messagesCount">0</p></article>
+            <article class="card"><h3>Total Events</h3><p id="eventsCount">0</p></article>
+          </div>
+
+          <div class="cards two-col">
+            <article class="card">
+              <h3>Add New Event</h3>
+              <form id="eventForm" class="stacked-form" novalidate>
+                <label>Title <input type="text" id="eventTitle" required /></label>
+                <label>Date <input type="date" id="eventDate" required /></label>
+                <label>
+                  Type
+                  <select id="eventType" required>
+                    <option value="academic">Academic</option>
+                    <option value="sports">Sports</option>
+                    <option value="community">Community</option>
+                  </select>
+                </label>
+                <label>Description <textarea id="eventDescription" rows="3" required></textarea></label>
+                <button type="submit" class="btn primary">Create Event</button>
+                <p id="eventFeedback" class="form-message" aria-live="polite"></p>
+              </form>
+            </article>
+            <article class="card">
+              <h3>Latest Admissions</h3>
+              <ul id="latestAdmissions" class="simple-list"></ul>
+            </article>
+            <article class="card">
+              <h3>Latest Messages</h3>
+              <ul id="latestMessages" class="simple-list"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Shanti Namuna Secondary School</p>
+        <p>123 Learning Avenue, Central City • +977-01-4455667</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
