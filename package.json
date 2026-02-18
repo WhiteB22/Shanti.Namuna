@@ -1,0 +1,11 @@
+{
+  "name": "shanti-namuna-v2",
+  "version": "2.0.0",
+  "description": "Full-stack website for Shanti Namuna Secondary School",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check script.js"
+  }
+}
